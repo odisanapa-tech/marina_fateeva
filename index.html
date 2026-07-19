@@ -138,10 +138,6 @@
     width:100%;height:100%;object-fit:cover;display:block;
     filter:grayscale(.06) contrast(1.04);
   }
-  .hero-photo-frame::after{
-    content:'';position:absolute;inset:0;pointer-events:none;
-    background:linear-gradient(180deg,rgba(28,30,34,0) 55%,rgba(28,30,34,.55) 100%);
-  }
   .hero-photo::before{
     content:'';position:absolute;left:-14px;top:-14px;right:14px;bottom:60px;
     border:1px solid var(--red);border-radius:280px 280px 32px 32px;
@@ -407,7 +403,6 @@
   <div class="wrap">
     <div class="hero-grid">
       <div class="hero-text">
-        <div class="eyebrow rv"><i></i> Вокал · дети и подростки · Майкоп</div>
         <h1 class="hero-name rv">Марина<br><em>Фатеева</em></h1>
         <p class="hero-tagline rv">Учу детей петь так, чтобы им это нравилось.</p>
         <p class="hero-sub rv">Вокальный педагог из Майкопа. 22 года работаю с детьми и подростками — от первых уроков до сцены и поступления в музыкальный вуз.</p>
@@ -420,10 +415,6 @@
       <div class="hero-photo rv">
         <div class="hero-photo-frame">
           <img src="marina-fateeva.jpg" alt="Марина Валерьевна Фатеева">
-        </div>
-        <div class="hero-photo-label">
-          <span>Педагог по вокалу</span>
-          <span>Майкоп · очно</span>
         </div>
       </div>
     </div>
