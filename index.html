@@ -216,15 +216,11 @@
     border-color:var(--line-strong);transform:translateY(-4px);
     background:var(--graphite-3);
   }
-  .aud-ico{
-    width:52px;height:52px;border-radius:14px;
-    background:rgba(212,43,43,.1);border:1px solid rgba(212,43,43,.28);
-    display:flex;align-items:center;justify-content:center;
-    color:var(--red);margin-bottom:26px;
-    transition:transform .35s ease;
+  .aud-num{
+    font-family:'Playfair Display',serif;font-size:14px;font-weight:400;
+    letter-spacing:.28em;color:var(--red);margin-bottom:34px;
+    display:inline-block;padding-bottom:12px;border-bottom:1px solid rgba(212,43,43,.35);
   }
-  .aud-card:hover .aud-ico{transform:rotate(-4deg) scale(1.05)}
-  .aud-ico svg{width:26px;height:26px}
   .aud-card h3{
     font-family:'Playfair Display',serif;font-weight:400;font-size:24px;
     line-height:1.25;margin-bottom:14px;
@@ -250,28 +246,16 @@
   @media(max-width:780px){.how{grid-template-columns:1fr}}
 
   /* result */
-  .result-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:80px;align-items:center}
-  .result-list{list-style:none;display:grid;gap:22px}
+  .result-list{list-style:none;display:grid;gap:0;max-width:900px}
   .result-list li{
-    padding-left:36px;position:relative;font-size:18px;color:var(--bone);line-height:1.55;
+    padding:26px 0 26px 40px;position:relative;font-size:19px;color:var(--bone);line-height:1.55;
+    border-top:1px solid var(--line);
   }
+  .result-list li:last-child{border-bottom:1px solid var(--line)}
   .result-list li::before{
-    content:'';position:absolute;left:0;top:11px;width:22px;height:1px;background:var(--red);
+    content:'';position:absolute;left:0;top:38px;width:24px;height:1px;background:var(--red);
   }
   .result-list li b{color:var(--bone);font-weight:400;font-style:normal}
-  .quote{
-    font-family:'Playfair Display',serif;font-style:italic;font-weight:400;
-    font-size:clamp(24px,2.6vw,32px);line-height:1.35;
-    padding:30px 34px;border-left:2px solid var(--red);
-    background:rgba(212,43,43,.05);border-radius:0 16px 16px 0;
-    color:var(--bone);
-  }
-  .quote-cite{
-    display:block;margin-top:18px;font-family:'Manrope',sans-serif;
-    font-style:normal;font-size:12px;letter-spacing:.22em;
-    text-transform:uppercase;color:var(--bone-faint);
-  }
-  @media(max-width:900px){.result-grid{grid-template-columns:1fr;gap:48px}}
 
   /* steps */
   .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:20px;overflow:hidden}
@@ -436,33 +420,17 @@
     <p class="section-lead rv">Неважно, ребёнок впервые берёт микрофон или готовится к поступлению в вуз или кастингу «Голос. Дети».</p>
     <div class="aud">
       <div class="aud-card rv">
-        <div class="aud-ico">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="9" y="2" width="6" height="12" rx="3"/>
-            <path d="M5 10a7 7 0 0 0 14 0"/>
-            <line x1="12" y1="17" x2="12" y2="22"/>
-            <line x1="8" y1="22" x2="16" y2="22"/>
-          </svg>
-        </div>
-        <h3>Впервые пробует голос</h3>
+        <div class="aud-num">01</div>
+        <h3>Впервые пробует петь</h3>
         <p>Никогда серьёзно не пел, стесняется, боится, что не получится. Начинаем с самого простого — со свободного звука.</p>
       </div>
       <div class="aud-card rv">
-        <div class="aud-ico">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M12 2l2.4 5 5.6.8-4 4 1 5.6L12 15l-5 2.4 1-5.6-4-4L9.6 7z"/>
-          </svg>
-        </div>
+        <div class="aud-num">02</div>
         <h3>Готовится к сцене</h3>
         <p>Конкурс, кастинг, отчётный концерт, детский музыкальный проект. Собираем номер под конкретную дату и площадку.</p>
       </div>
       <div class="aud-card rv">
-        <div class="aud-ico">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M22 10L12 4 2 10l10 6 10-6z"/>
-            <path d="M6 12v5c3 2 9 2 12 0v-5"/>
-          </svg>
-        </div>
+        <div class="aud-num">03</div>
         <h3>Идёт в профессию</h3>
         <p>Поступает в музыкальный вуз или колледж. Программа под комиссию, разбор произведений, сопровождение до дня экзамена.</p>
       </div>
@@ -474,7 +442,7 @@
   <div class="wrap">
     <div class="kicker rv">Подход</div>
     <h2 class="rv">Как я <em>веду занятия.</em></h2>
-    <p class="section-lead rv">Четыре вещи, к которым я пришла за 22 года работы. Это не методика — это то, из чего для меня складывается урок.</p>
+    <p class="section-lead rv">Четыре вещи, к которым я пришла за 22 года работы.</p>
     <div class="how">
       <div class="rv">
         <span class="how-num">01</span>
@@ -505,17 +473,11 @@
     <div class="kicker rv">Результат</div>
     <h2 class="rv">Куда приходят <em>мои ученики.</em></h2>
     <p class="section-lead rv">Мои — это те, кто занимался у меня системно. Каждый пришёл к своему: кто-то на сцену, кто-то в профессию, кто-то — просто перестал стесняться петь.</p>
-    <div class="result-grid">
-      <ul class="result-list rv">
-        <li>Поют на проектах <b>«Голос. Дети», «Детская Новая Волна», «Наше Поколение»</b></li>
-        <li>Поступают <b>на высокие баллы</b> в ведущие музыкальные вузы страны</li>
-        <li>Выходят на сцену <b>без страха и зажатости</b> — со своим голосом</li>
-      </ul>
-      <blockquote class="quote rv">
-        Голос, в котором слышно ребёнка.
-        <span class="quote-cite">— из отзыва родителей</span>
-      </blockquote>
-    </div>
+    <ul class="result-list rv">
+      <li>Поют на проектах <b>«Голос. Дети», «Детская Новая Волна», «Наше Поколение»</b></li>
+      <li>Поступают <b>на высокие баллы</b> в ведущие музыкальные вузы страны</li>
+      <li>Выходят на сцену <b>без страха и зажатости</b> — со своим голосом</li>
+    </ul>
   </div>
 </section>
 
@@ -612,7 +574,7 @@
 
 <section class="pull-sec">
   <div class="narrow">
-    <p class="pull rv">Ваш ребёнок поёт.<br><b>Пусть его услышат.</b></p>
+    <p class="pull rv">Ваш ребёнок поёт?<br><b>Пусть его услышит мир.</b></p>
   </div>
 </section>
 
